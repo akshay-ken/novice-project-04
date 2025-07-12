@@ -1,33 +1,25 @@
 // import { useRef, useState } from "react";
-import { HomePage } from "./components/HomePage";
+import { useState } from "react";
 import { MainPage } from "./components/MainPage";
+import { Alert } from "./components/Alert";
 
 function App() {
-  // const currentPost = useRef(1);
-  // const [urlValue, setUrlValue] = useState(
-  //   `https://jsonplaceholder.typicode.com/posts/${currentPost.current}`
-  // );
-
-  // function onChange(event) {
-  //   setUrlValue(event.target.value);
-  // }
-  // function handleClick() {
-  //   currentPost.current++;
-  //   setUrlValue(
-  //     (prev) =>
-  //       `https://jsonplaceholder.typicode.com/posts/${currentPost.current}`
-  //   );
-  //   console.log(currentPost, urlValue);
-  // }
+  const [showAlert, setShowAlert] = useState(false);
+  function handleShowAlert() {
+    setShowAlert((prev) => !prev);
+  }
   return (
     <>
-      {/* <input
-        type="text"
-        value={urlValue}
-        onChange={onChange}
-        className="bg-black text-white"
-      />
-      <HomePage url={urlValue} handleClick={handleClick} /> */}
+      {/* add alert component here for testing */}
+      {/* <div className=" flex flex-col justify-center items-center h-screen">
+        <button
+          onClick={handleShowAlert}
+          className="bg-Green-300 p-2 w-fit rounded-2xl"
+        >
+          {showAlert ? "Hide" : "Show"} Alert
+        </button>
+        {showAlert && <Alert />}
+      </div> */}
       <MainPage />
     </>
   );

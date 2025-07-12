@@ -44,7 +44,7 @@ export function MainPage() {
             Advice # {currentAdvice.id}
           </h1>
           <article className="-mx-6">
-            <p className="font-bold text-4xl text-center text-Blue-200">
+            <p className="font-bold text-4xl text-pretty text-center text-Blue-200">
               <q>{currentAdvice.advice} </q>
             </p>
           </article>
